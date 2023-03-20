@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Chap17Ex2SteamEngineEfficiency 
+{
+    public static void main(String[] args) 
+    {
+        Scanner input = new Scanner(System.in);
+        double Tair, Tsteam, efficiency;
+        
+        System.out.print("Enter air temperature in Kelvin: ");
+        Tair = input.nextDouble();
+
+        System.out.print("Enter steam temperature in Kelvin: ");
+        Tsteam = input.nextDouble();
+        
+
+        if (Tsteam < 373) 
+        {
+            efficiency = 0;
+        } else 
+        {
+            efficiency = 1 - (Tair / Tsteam);
+        }
+
+        System.out.println("The maximum possible efficiency of a steam engine is " + efficiency);
+    }
+}
